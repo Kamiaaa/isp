@@ -107,7 +107,7 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 overflow-x-hidden">
       {/* Hero Section */}
       <motion.div 
         className="relative bg-gray-900 overflow-hidden"
@@ -124,18 +124,18 @@ const AboutPage = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-500 mix-blend-multiply" />
         </div>
 
-        <div className="relative z-10 py-24 sm:py-32 lg:py-40 px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h1 className="text-4xl font-source font-semibold text-white sm:text-5xl lg:text-6xl mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-source font-semibold text-white mb-4 sm:mb-6 px-4">
                 About <span className="text-green-200">A1 Communication</span>
               </h1>
               <motion.p 
-                className="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed"
+                className="text-base sm:text-lg md:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed px-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -149,24 +149,25 @@ const AboutPage = () => {
       </motion.div>
 
       {/* Story Section */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8">
+      <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <motion.div
               variants={fadeInLeft}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
+              className="order-2 lg:order-1"
             >
-              <h2 className="text-3xl sm:text-4xl font-source font-semibold text-gray-900 dark:text-white mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-source font-semibold text-gray-900 dark:text-white mb-4">
                 Our Story
               </h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-green-500 to-green-600 rounded-full mb-6" />
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+              <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-green-500 to-green-600 rounded-full mb-4 sm:mb-6" />
+              <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
                 Founded in 2010, <span className="font-semibold text-green-600 dark:text-green-400">A1 Communication</span> began with a simple yet powerful vision: 
                 to bring blazing-fast, reliable internet to every home and business in our community.
               </p>
-              <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
                 What started as a small team of engineers in a single office has grown into a 
                 regional leader in fiber-optic and wireless broadband technology. Today, we proudly 
                 serve over 200,000 satisfied customers with a network that spans urban centers and 
@@ -179,7 +180,7 @@ const AboutPage = () => {
               </p>
             </motion.div>
             <motion.div 
-              className="relative rounded-2xl overflow-hidden shadow-2xl"
+              className="relative rounded-2xl overflow-hidden shadow-2xl order-1 lg:order-2 mb-6 lg:mb-0"
               variants={fadeInRight}
               initial="hidden"
               whileInView="visible"
@@ -188,7 +189,7 @@ const AboutPage = () => {
               <motion.img
                 src="https://images.unsplash.com/photo-1731458769726-cef60c792665?q=80&w=963&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="A1 Communication team working on network infrastructure"
-                className="w-full h-full object-cover"
+                className="w-full h-64 sm:h-80 md:h-96 object-cover"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.4 }}
               />
@@ -199,10 +200,10 @@ const AboutPage = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800 transition-colors duration-300">
+      <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800 transition-colors duration-300">
         <div className="max-w-7xl mx-auto">
           <motion.div 
-            className="grid grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -213,17 +214,17 @@ const AboutPage = () => {
                 key={stat.label}
                 variants={fadeInUp}
                 whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-                className="text-center"
+                className="text-center p-4"
               >
                 <motion.div 
-                  className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-green-500 to-green-600 text-white mb-4 shadow-lg"
+                  className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-r from-green-500 to-green-600 text-white mb-3 sm:mb-4 shadow-lg"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <stat.icon className="h-8 w-8" />
+                  <stat.icon className="h-6 w-6 sm:h-8 sm:w-8" />
                 </motion.div>
                 <motion.div 
-                  className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-2"
+                  className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
@@ -231,7 +232,7 @@ const AboutPage = () => {
                 >
                   {stat.value}
                 </motion.div>
-                <div className="text-gray-600 dark:text-gray-400 font-medium">
+                <div className="text-sm sm:text-base text-gray-600 dark:text-gray-400 font-medium">
                   {stat.label}
                 </div>
               </motion.div>
@@ -241,11 +242,11 @@ const AboutPage = () => {
       </div>
 
       {/* Mission & Vision */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8">
+      <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 sm:mb-12">
             <motion.h2 
-              className="text-3xl sm:text-4xl font-source font-semibold text-gray-900 dark:text-white mb-4"
+              className="text-2xl sm:text-3xl md:text-4xl font-source font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -254,14 +255,14 @@ const AboutPage = () => {
               Our Mission & Vision
             </motion.h2>
             <motion.div 
-              className="w-20 h-1 bg-linear-to-r from-green-500 to-green-600 rounded-full mx-auto mb-6"
+              className="w-16 sm:w-20 h-1 bg-gradient-to-r from-green-500 to-green-600 rounded-full mx-auto mb-4 sm:mb-6"
               initial={{ width: 0 }}
               whileInView={{ width: 80 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             />
             <motion.p 
-              className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+              className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -271,9 +272,9 @@ const AboutPage = () => {
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             <motion.div 
-              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8"
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 sm:p-8"
               variants={fadeInLeft}
               initial="hidden"
               whileInView="visible"
@@ -282,14 +283,14 @@ const AboutPage = () => {
               transition={{ duration: 0.3 }}
             >
               <motion.div 
-                className="w-14 h-14 rounded-xl bg-linear-to-r from-green-500 to-green-600 flex items-center justify-center mb-6"
+                className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-r from-green-500 to-green-600 flex items-center justify-center mb-4 sm:mb-6"
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.5 }}
               >
-                <FaRocket className="h-7 w-7 text-white" />
+                <FaRocket className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
               </motion.div>
-              <h3 className="text-2xl font-source font-semibold text-gray-900 dark:text-white mb-4">Our Mission</h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+              <h3 className="text-xl sm:text-2xl font-source font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4">Our Mission</h3>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
                 To deliver lightning-fast, reliable internet with transparent pricing and 
                 human-centered support. We believe connectivity is a fundamental right that 
                 drives education, innovation, and economic growth.
@@ -297,7 +298,7 @@ const AboutPage = () => {
             </motion.div>
 
             <motion.div 
-              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8"
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 sm:p-8"
               variants={fadeInRight}
               initial="hidden"
               whileInView="visible"
@@ -306,14 +307,14 @@ const AboutPage = () => {
               transition={{ duration: 0.3 }}
             >
               <motion.div 
-                className="w-14 h-14 rounded-xl bg-linear-to-r from-green-500 to-green-600 flex items-center justify-center mb-6"
+                className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-r from-green-500 to-green-600 flex items-center justify-center mb-4 sm:mb-6"
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.5 }}
               >
-                <FaGlobe className="h-7 w-7 text-white" />
+                <FaGlobe className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
               </motion.div>
-              <h3 className="text-2xl font-source font-semibold text-gray-900 dark:text-white mb-4">Our Vision</h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+              <h3 className="text-xl sm:text-2xl font-source font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4">Our Vision</h3>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
                 To build a future where every person, business, and device is seamlessly 
                 connected — empowering communities, enabling remote work, and bridging the 
                 digital divide for generations to come.
@@ -324,11 +325,11 @@ const AboutPage = () => {
       </div>
 
       {/* Core Values */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-amber-50 dark:from-gray-800 dark:to-gray-900">
+      <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-amber-50 dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 sm:mb-12">
             <motion.h2 
-              className="text-3xl sm:text-4xl font-source font-semibold text-gray-900 dark:text-white mb-4"
+              className="text-2xl sm:text-3xl md:text-4xl font-source font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -337,14 +338,14 @@ const AboutPage = () => {
               Our Core Values
             </motion.h2>
             <motion.div 
-              className="w-20 h-1 bg-gradient-to-r from-green-500 to-green-600 rounded-full mx-auto mb-6"
+              className="w-16 sm:w-20 h-1 bg-gradient-to-r from-green-500 to-green-600 rounded-full mx-auto mb-4 sm:mb-6"
               initial={{ width: 0 }}
               whileInView={{ width: 80 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             />
             <motion.p 
-              className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+              className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-4"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -355,7 +356,7 @@ const AboutPage = () => {
           </div>
 
           <motion.div 
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -370,19 +371,19 @@ const AboutPage = () => {
                   y: -5,
                   transition: { duration: 0.3 }
                 }}
-                className="bg-white dark:bg-gray-800 rounded-2xl p-6 text-center shadow-lg cursor-pointer"
+                className="bg-white dark:bg-gray-800 rounded-2xl p-5 sm:p-6 text-center shadow-lg cursor-pointer"
               >
                 <motion.div 
-                  className={`w-16 h-16 rounded-xl bg-gradient-to-r ${value.color} flex items-center justify-center mx-auto mb-4 shadow-md`}
+                  className={`w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-r ${value.color} flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-md`}
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <value.icon className="h-8 w-8 text-white" />
+                  <value.icon className="h-7 w-7 sm:h-8 sm:w-8 text-white" />
                 </motion.div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">
                   {value.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
                   {value.description}
                 </p>
               </motion.div>
@@ -392,7 +393,7 @@ const AboutPage = () => {
       </div>
 
       {/* Testimonial Section */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-linear-to-r from-green-600 to-green-500">
+      <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-600 to-green-500">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -400,10 +401,10 @@ const AboutPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <FaQuoteLeft className="h-12 w-12 text-white/30 mx-auto mb-6" />
+            <FaQuoteLeft className="h-10 w-10 sm:h-12 sm:w-12 text-white/30 mx-auto mb-4 sm:mb-6" />
           </motion.div>
           <motion.p 
-            className="text-2xl sm:text-3xl text-white font-light leading-relaxed mb-8"
+            className="text-xl sm:text-2xl md:text-3xl text-white font-light leading-relaxed mb-6 sm:mb-8 px-4"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -420,18 +421,18 @@ const AboutPage = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div>
-              <p className="text-white font-semibold text-lg">Minhazul Haque</p>
-              <p className="text-green-200">CEO, Sys Solutions</p>
+              <p className="text-white font-semibold text-base sm:text-lg">Minhazul Haque</p>
+              <p className="text-green-200 text-sm sm:text-base">CEO, Sys Solutions</p>
             </div>
           </motion.div>
         </div>
       </div>
 
       {/* CTA Section */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
+      <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
-            className="text-3xl sm:text-4xl font-source font-semibold text-gray-900 dark:text-white mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl font-source font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4 px-4"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -440,7 +441,7 @@ const AboutPage = () => {
             Ready to Experience the A1 Difference?
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 dark:text-gray-300 mb-8"
+            className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 px-4"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -449,14 +450,14 @@ const AboutPage = () => {
             Join thousands of satisfied customers who trust us for their internet needs.
           </motion.p>
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <motion.button 
-              className="px-8 py-3 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-lg font-semibold shadow-lg"
+              className="px-6 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-lg font-semibold shadow-lg text-sm sm:text-base"
               whileHover={{ 
                 scale: 1.05,
                 background: "linear-gradient(to right, #10b981, #059669)",
@@ -467,7 +468,7 @@ const AboutPage = () => {
               View Our Plans
             </motion.button>
             <motion.button 
-              className="px-8 py-3 border-2 border-green-600 text-green-600 dark:text-green-400 rounded-lg font-semibold"
+              className="px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-green-600 text-green-600 dark:text-green-400 rounded-lg font-semibold text-sm sm:text-base"
               whileHover={{ 
                 scale: 1.05,
                 backgroundColor: "rgba(16, 185, 129, 0.1)",
