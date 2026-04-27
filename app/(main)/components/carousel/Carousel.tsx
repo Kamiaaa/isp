@@ -288,7 +288,7 @@ export default function Carousel() {
             onTouchEnd={handleTouchEnd}
         >
             {/* Content Container */}
-            <div className="relative h-full w-full max-w-7xl mx-auto md:pt-32 z-10">
+            <div className="relative h-full w-full max-w-7xl mx-auto pt-32 z-10">
                 <div className="grid lg:grid-cols-2 items-center justify-items-center gap-8 lg:gap-12 h-full">
                     {/* Text Content with enhanced animations */}
                     <div className="order-2 lg:order-1 flex flex-col justify-center items-center text-center lg:text-left px-4 lg:px-0">
