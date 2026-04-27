@@ -107,10 +107,10 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="min-h-screen mt-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 overflow-x-hidden">
       {/* Hero Section */}
       <motion.div 
-        className="relative bg-gray-900 overflow-hidden"
+        className="relative bg-gray-900 overflow-hidden min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-screen flex items-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -124,7 +124,7 @@ const AboutPage = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-500 mix-blend-multiply" />
         </div>
 
-        <div className="relative z-10 py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 w-full py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
