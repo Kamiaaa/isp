@@ -120,7 +120,7 @@ export default function Carousel() {
         {
             id: 4,
             title: "99.9% Uptime",
-            subtitle: "Reliable Connection Guaranteed",
+            subtitle: "Reliable Connection",
             buttonText: "Get Connected",
             items: [
                 {
