@@ -106,11 +106,11 @@ const Footer: React.FC = () => {
               </div>
               <div className="text-gray-200 leading-relaxed">
                 <a href='https://maps.app.goo.gl/' target='_blank' rel="noopener noreferrer" className="group/link">
-                  <p className="group-hover/link:text-gray-300 transition-colors drop-shadow font-poppins">123 Tech Park, Silicon Valley</p>
+                  <p className="group-hover/link:text-gray-300 transition-colors drop-shadow font-poppins">Uttara, Dhaka -1230</p>
                 </a>
-                <a href='https://maps.app.goo.gl/' target='_blank' rel="noopener noreferrer" className="group/link mt-2 block">
+                {/* <a href='https://maps.app.goo.gl/' target='_blank' rel="noopener noreferrer" className="group/link mt-2 block">
                   <p className="group-hover/link:text-gray-300 transition-colors drop-shadow text-sm font-poppins">California, USA - 94025</p>
-                </a>
+                </a> */}
               </div>
             </div>
 
