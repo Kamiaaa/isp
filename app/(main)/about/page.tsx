@@ -110,7 +110,7 @@ const AboutPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 overflow-x-hidden">
       {/* Hero Section */}
       <motion.div 
-        className="relative bg-gray-900 overflow-hidden min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-screen flex items-center"
+        className="relative bg-gray-900 overflow-hidden min-h-[60vh] sm:min-h-[70vh] md:min-h-[60vh] lg:min-h-[50vh] flex items-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -124,14 +124,14 @@ const AboutPage = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-500 mix-blend-multiply" />
         </div>
 
-        <div className="relative z-10 w-full py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 w-full py-10 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-source font-semibold text-white mb-4 sm:mb-6 px-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-source font-semibold text-white mb-4 sm:mb-6 px-4">
                 About <span className="text-green-200">A1 Communication</span>
               </h1>
               <motion.p 
@@ -189,7 +189,7 @@ const AboutPage = () => {
               <motion.img
                 src="https://images.unsplash.com/photo-1731458769726-cef60c792665?q=80&w=963&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="A1 Communication team working on network infrastructure"
-                className="w-full h-64 sm:h-64 md:h-64 object-cover"
+                className="w-full h-64 sm:h-80 md:h-96 object-cover"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.4 }}
               />
