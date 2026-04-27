@@ -16,8 +16,11 @@ import {
   FaChartLine,
   FaRegLightbulb,
   FaHeart,
-  FaQuoteLeft
+  FaQuoteLeft,
+  FaBolt
 } from 'react-icons/fa';
+import { MdDataUsage } from 'react-icons/md';
+import { FiShield } from 'react-icons/fi';
 
 const AboutPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -107,14 +110,9 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="h-auto bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 overflow-x-hidden">
-      {/* Hero Section */}
-      <motion.div 
-        className="relative bg-gray-900 overflow-hidden min-h-[60vh] sm:min-h-[70vh] md:min-h-[60vh] lg:min-h-[50vh] flex items-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 overflow-x-hidden">
+      {/* Hero Section - Same style as Packages page */}
+      <div className="relative bg-gray-900 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             className="w-full h-full object-cover opacity-40"
@@ -124,29 +122,36 @@ const AboutPage = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-500 mix-blend-multiply" />
         </div>
 
-        <div className="relative z-10 w-full py-10 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 py-24 sm:py-32 lg:py-40 px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-source font-semibold text-white mb-4 sm:mb-6 px-4">
+            <div className={`transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6">
+                <FaBolt className="w-4 h-4" />
+                Our Story & Mission
+              </div>
+              <h1 className="text-4xl font-source font-bold text-white sm:text-5xl lg:text-6xl mb-6">
                 About <span className="text-green-200">A1 Communication</span>
               </h1>
-              <motion.p 
-                className="text-base sm:text-lg md:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed px-4"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                We're on a mission to connect people, empower businesses, and build 
-                a faster, more reliable digital future for everyone.
-              </motion.p>
-            </motion.div>
+              
+              {/* Feature indicators */}
+              <div className="flex flex-wrap justify-center gap-6 mt-8">
+                <div className="flex items-center gap-2 text-sm text-blue-100">
+                  <FaRocket className="w-4 h-4" />
+                  <span>Industry Leaders</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-blue-100">
+                  <MdDataUsage className="w-4 h-4 text-green-300" />
+                  <span>200K+ Customers</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-blue-100">
+                  <FiShield className="w-4 h-4 text-purple-300" />
+                  <span>15+ Years Experience</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Story Section */}
       <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
