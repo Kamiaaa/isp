@@ -189,7 +189,7 @@ const AboutPage = () => {
               <motion.img
                 src="https://images.unsplash.com/photo-1731458769726-cef60c792665?q=80&w=963&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="A1 Communication team working on network infrastructure"
-                className="w-full h-64 sm:h-80 md:h-96 object-cover"
+                className="w-full h-64 sm:h-64 md:h-64 object-cover"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.4 }}
               />
