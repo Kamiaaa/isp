@@ -244,7 +244,7 @@ const Navbar: React.FC = () => {
         }`}
         style={getMobileMenuStyle()}
       >
-        <div className="h-full overflow-y-auto px-4 py-4 space-y-0 pt-16">
+        <div className="h-full overflow-y-auto px-4 py-4 space-y-0 pt-28">
           {navItems.map((item) => (
             <div 
               key={item.id} 
