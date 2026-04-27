@@ -1,0 +1,203 @@
+/* Carousel.module.css */
+
+/* Enhanced Switch Out Animations */
+@keyframes switchOutMain {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 1;
+        filter: blur(0px);
+    }
+    20% {
+        transform: translate(40px, -30px) scale(1.1) rotate(5deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(150px, -120px) scale(0.8) rotate(15deg);
+        opacity: 0;
+        filter: blur(10px);
+    }
+}
+
+@keyframes switchOutSmall {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 1;
+        filter: blur(0px);
+    }
+    20% {
+        transform: translate(-30px, -40px) scale(1.1) rotate(-5deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-120px, -150px) scale(0.8) rotate(-15deg);
+        opacity: 0;
+        filter: blur(10px);
+    }
+}
+
+@keyframes switchOutSide {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 1;
+        filter: blur(0px);
+    }
+    20% {
+        transform: translate(30px, 40px) scale(1.1) rotate(8deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(120px, 150px) scale(0.8) rotate(20deg);
+        opacity: 0;
+        filter: blur(10px);
+    }
+}
+
+/* Enhanced Switch In Animations */
+@keyframes switchInMain {
+    0% {
+        transform: translate(-150px, 120px) scale(0.8) rotate(-15deg);
+        opacity: 0;
+        filter: blur(10px);
+    }
+    30% {
+        transform: translate(-40px, 30px) scale(1.05) rotate(-5deg);
+        opacity: 0.5;
+        filter: blur(3px);
+    }
+    100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+@keyframes switchInSmall {
+    0% {
+        transform: translate(120px, -150px) scale(0.8) rotate(15deg);
+        opacity: 0;
+        filter: blur(10px);
+    }
+    30% {
+        transform: translate(30px, -40px) scale(1.05) rotate(5deg);
+        opacity: 0.5;
+        filter: blur(3px);
+    }
+    100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+@keyframes switchInSide {
+    0% {
+        transform: translate(-120px, -150px) scale(0.8) rotate(-20deg);
+        opacity: 0;
+        filter: blur(10px);
+    }
+    30% {
+        transform: translate(-30px, -40px) scale(1.05) rotate(-8deg);
+        opacity: 0.5;
+        filter: blur(3px);
+    }
+    100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+/* Text Slide Animations */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animation Classes */
+.animate-switch-out-main {
+    animation: switchOutMain 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-switch-out-small {
+    animation: switchOutSmall 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-switch-out-side {
+    animation: switchOutSide 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-switch-in-main {
+    animation: switchInMain 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-switch-in-small {
+    animation: switchInSmall 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-switch-in-side {
+    animation: switchInSide 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.text-slide-in {
+    animation: slideInFromLeft 0.6s ease-out forwards;
+}
+
+.text-slide-in-delay {
+    animation: slideInFromRight 0.6s ease-out 0.2s forwards;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.button-pop-in {
+    animation: popIn 0.5s ease-out 0.4s forwards;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Image Fade In for new slides */
+.image-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
