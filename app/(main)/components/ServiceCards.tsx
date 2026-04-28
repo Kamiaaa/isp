@@ -5,13 +5,13 @@ import { motion } from 'framer-motion';
 // Custom SVG Icons
 const Icons = {
     Broadband: () => (
-        <svg className="h-20 w-20 text-green-500 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <svg className="h-20 w-20 text-red-500 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
             <path d="M3 10h18M5 10v6a2 2 0 002 2h10a2 2 0 002-2v-6M8 10V6h8v4M6 20h12" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
     ),
 
     Wifi: () => (
-        <svg className="h-20 w-20 text-green-500 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <svg className="h-20 w-20 text-red-500 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
             <path d="M4 9a12 12 0 0116 0M7 12a8 8 0 0110 0M10 15a4 4 0 014 0M12 19h.01" strokeLinecap="round" strokeLinejoin="round" />
             <rect x="3" y="17" width="18" height="3" rx="1" />
             <line x1="7" y1="17" x2="7" y2="14" />
@@ -20,7 +20,7 @@ const Icons = {
     ),
 
     Satellite: () => (
-        <svg className="h-20 w-20 text-green-500 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <svg className="h-20 w-20 text-red-500 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
             <path d="M5 19l6-6M3 21l2-2M14 3a7 7 0 017 7M14 7a3 3 0 013 3" strokeLinecap="round" strokeLinejoin="round" />
             <circle cx="10" cy="14" r="3" />
             <line x1="10" y1="17" x2="10" y2="21" />
@@ -28,7 +28,7 @@ const Icons = {
     ),
 
     Netflix: () => (
-        <svg className="h-20 w-20 text-green-500 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <svg className="h-20 w-20 text-red-500 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
             <rect x="3" y="6" width="10" height="12" rx="1" />
             <path d="M13 10l6-3v10l-6-3" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M16 8a3 3 0 013 3M16 5a6 6 0 016 6" strokeLinecap="round" />
