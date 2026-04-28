@@ -97,7 +97,7 @@ const ServiceCard: React.FC<CardProps> = ({ title, description, icon, bgImage, i
                 </motion.p>
 
                 <motion.button 
-                    className="mt-2 inline-flex items-center text-lg font-semibold text-green-600 dark:text-green-400 transition-all duration-300 group-hover:text-white group-hover:underline"
+                    className="mt-2 inline-flex items-center text-lg font-semibold text-red-600 dark:text-red-400 transition-all duration-300 group-hover:text-white group-hover:underline"
                     whileHover={{ x: 5 }}
                     whileTap={{ scale: 0.95 }}
                 >
