@@ -304,10 +304,10 @@ export default function Carousel() {
                         {/* Enhanced Button Link with proper routing */}
                         <Link 
                             href={slide.buttonLink}
-                            className={`relative overflow-hidden bg-linear-to-r from-green-600 to-green-500 text-white font-source font-semibold py-2 sm:py-3 px-6 sm:px-8 mt-4 sm:mt-6 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl group text-base sm:text-lg lg:text-2xl inline-block ${styles['button-pop-in']}`}
+                            className={`relative overflow-hidden bg-linear-to-r from-red-600 to-red-500 text-white font-source font-semibold py-2 sm:py-3 px-6 sm:px-8 mt-4 sm:mt-6 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl group text-base sm:text-lg lg:text-2xl inline-block ${styles['button-pop-in']}`}
                         >
                             <span className="relative z-10">{slide.buttonText}</span>
-                            <span className="absolute inset-0 bg-linear-to-r from-green-700 to-green-600 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0"></span>
+                            <span className="absolute inset-0 bg-linear-to-r from-red-700 to-red-600 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0"></span>
                         </Link>
                     </div>
 
