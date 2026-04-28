@@ -6,7 +6,7 @@ import {
   HiMenu, 
   HiX
 } from 'react-icons/hi';
-import { FiLogIn } from 'react-icons/fi'; // Import from correct package
+import { FiLogIn } from 'react-icons/fi';
 import Image from 'next/image';
 
 interface NavItem {
@@ -217,23 +217,11 @@ const Navbar: React.FC = () => {
               ))}
             </div>
 
-            {/* Right side for mobile: Self Care button + Menu button */}
-            <div className="flex items-center space-x-3">
-              {/* Self Care Button - Visible on mobile and desktop */}
-              <Link
-                href="/login"
-                className="relative overflow-hidden bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg group flex items-center gap-2 text-sm"
-              >
-                <FiLogIn className="w-4 h-4 relative z-10" />
-                <span className="relative z-10 hidden sm:inline">Self Care</span>
-                <span className="relative z-10 sm:hidden">Login</span>
-                <span className="absolute inset-0 bg-red-700 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0"></span>
-              </Link>
-
-              {/* Mobile menu button - Only visible on mobile/tablet */}
+            {/* Mobile menu button - Only visible on mobile, no Self Care button outside */}
+            <div className="lg:hidden">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-2.5 rounded-lg text-gray-700 dark:text-gray-300 hover:text-pink-700 dark:hover:text-pink-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300"
+                className="p-2.5 rounded-lg text-gray-700 dark:text-gray-300 hover:text-pink-700 dark:hover:text-pink-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300"
                 aria-label="Toggle menu"
               >
                 {isMobileMenuOpen ? (
@@ -258,7 +246,7 @@ const Navbar: React.FC = () => {
         style={getMobileMenuStyle()}
       >
         <div className="h-full overflow-y-auto px-4 py-4 space-y-0 pt-28">
-          {/* Add Self Care button at the top of mobile menu for easy access */}
+          {/* Self Care button inside hamburger menu only */}
           <div className="mb-4 pb-4 border-b border-gray-100 dark:border-gray-700">
             <Link
               href="/login"
