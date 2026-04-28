@@ -34,7 +34,7 @@ const ScrollToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full relative overflow-hidden bg-green-600 text-white transition-all duration-300 hover:scale-110 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-[#6A957A] group flex items-center justify-center"
+          className="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full relative overflow-hidden bg-red-600 text-white transition-all duration-300 hover:scale-110 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-[#6A957A] group flex items-center justify-center"
           style={{
             position: 'fixed',
             bottom: '2rem',
@@ -43,7 +43,7 @@ const ScrollToTop = () => {
           aria-label="Scroll to top"
         >
           {/* Animated background overlay */}
-          <span className="absolute inset-0 bg-green-700 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0"></span>
+          <span className="absolute inset-0 bg-red-700 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0"></span>
           
           {/* Progress circle */}
           <svg className="w-full h-full absolute top-0 left-0 transform -rotate-90 z-10">
