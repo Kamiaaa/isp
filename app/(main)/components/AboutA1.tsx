@@ -36,9 +36,9 @@ const AboutA1: React.FC = () => {
                             {/* Button with new design */}
                             <div className="mt-6">
                                 <Link href={'/about'}>
-                                <button className="relative overflow-hidden bg-green-600 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg group text-lg">
+                                <button className="relative overflow-hidden bg-red-600 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg group text-lg">
                                     <span className="relative z-10">Learn More About A1 Communication</span>
-                                    <span className="absolute inset-0 bg-green-700 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0"></span>
+                                    <span className="absolute inset-0 bg-red-700 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0"></span>
                                 </button>
                                 </Link>
                             </div>

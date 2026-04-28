@@ -47,12 +47,12 @@ const Banner: React.FC = () => {
           {/* Button with new design */}
           <button
             onClick={handleGetConnectedClick}
-            className="relative overflow-hidden bg-green-700 text-white font-semibold py-3 px-10 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg group flex items-center justify-center gap-2 w-auto mt-5 mx-auto text-base"
+            className="relative overflow-hidden bg-red-600 text-white font-semibold py-3 px-10 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg group flex items-center justify-center gap-2 w-auto mt-5 mx-auto text-base"
             aria-label="View Packages"
           >
             <FiWifi className="text-xl relative z-10" />
             <span className="relative z-10">View Packages</span>
-            <span className="absolute inset-0 bg-green-900 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0"></span>
+            <span className="absolute inset-0 bg-red-700 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0"></span>
           </button>
         </div>
       </div>

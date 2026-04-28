@@ -103,11 +103,11 @@ const Header: React.FC<HeaderProps> = ({
             {/* Self Care Button - Right with vertical centering */}
             <Link
               href={loginUrl}
-              className="relative overflow-hidden bg-green-600 text-white font-semibold py-2 px-5 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg group flex items-center gap-2"
+              className="relative overflow-hidden bg-red-600 text-white font-semibold py-2 px-5 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg group flex items-center gap-2"
             >
               <FiLogIn className="w-4 h-4 relative z-10" />
               <span className="relative z-10">{loginText}</span>
-              <span className="absolute inset-0 bg-green-700 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0"></span>
+              <span className="absolute inset-0 bg-red-700 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0"></span>
             </Link>
           </div>
         </div>
